@@ -19,12 +19,26 @@ P.S Dadi */
 
 let btnElement = document.querySelector('.btn');
 
-btnElement.addEventListener('click', function() {
+btnElement.addEventListener('click', function () {
     let usersEmail = ['hodkiewicz.amani@yahoo.com', 'kaitlin.jerde@yundt.com', 'lola81@langworth.com', 'rafael.koch@fritsch.com', 'eldin.balje@icloud.com'];
     /* console.log(usersEmail); */
     let inputElement = document.getElementById('userImput');
     let userValue = inputElement.value;
     /* console.log(userValue); */
+    let check = false;
+    for (let i = 0; i < usersEmail.length; i++) {
+        if (userValue.toLowerCase() === usersEmail[i].toLowerCase()) {
+            check = true;
+        }
+    }
 
+    const result = document.getElementById('result');
+    if (check) {
+        result.innerHTML = 'Bentornato';
+    } else {
+        result.innerHTML = 'Utenete non riconocsciuto';
+    }
 })
+
+
 
