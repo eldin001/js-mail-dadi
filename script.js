@@ -17,6 +17,14 @@ Consigli del giorno:
 Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
 P.S Dadi */
 
-let inputElement = document.getElementById('userImput');
-let userValue = inputElement.value;
-console.log(userValue);
+let btnElement = document.querySelector('.btn');
+
+btnElement.addEventListener('click', function() {
+    let usersEmail = ['hodkiewicz.amani@yahoo.com', 'kaitlin.jerde@yundt.com', 'lola81@langworth.com', 'rafael.koch@fritsch.com', 'eldin.balje@icloud.com'];
+    /* console.log(usersEmail); */
+    let inputElement = document.getElementById('userImput');
+    let userValue = inputElement.value;
+    /* console.log(userValue); */
+
+})
+
