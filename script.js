@@ -45,19 +45,32 @@ Consigli del giorno:
 Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
 P.S Dadi */ 
 
-function getRndInteger(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
+document.getElementById('dice-button').addEventListener('click', function(){
+    function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+    
+    let userScore = getRndInteger(1, 6);
+    let computerScore = getRndInteger(1, 6);
+    let result = [];
+    
+    if (userScore > computerScore) {
+        console.log(`Il tuo numero è ${userScore}.
+Il numero del computer è ${computerScore}.
+Hai vinto!`);
+    } else if (userScore < computerScore) {
+        console.log(`Il tuo numero è ${userScore}.
+Il numero del computer è ${computerScore}.
+Hai perso...`)
+    }
+})
 
-let userScore = '';
-let computerScore = '';
-
-let diceButtonElement = document.getElementById('outcome');
+/* let diceButtonElement = document.getElementById('outcome');
 
 diceButtonElement.addEventListener('click', function(){
-    let userScore = document.getElementById('userNumber').value;
-    console.log(userScore)
-})
+    userScore = document.getElementById('userNumber').value;
+    console.log(userScore);
+}) */
 
 
 
